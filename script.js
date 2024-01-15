@@ -9,20 +9,47 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var length = prompt("How may characters does your password need to be (between 8 & 128)?");
+  var much = prompt("How may characters does your password need to be (between 8 & 128)?");
   var upperCase = prompt("Would you like to include uppercase characters (Yes or No)?");
   var lowerCase = prompt("Would you like to include lowercase characters (Yes or No)?");
   var numeric = prompt("Would you like to include numeric characters (Yes or No)?");
   var specialCharacters = prompt("Would you like to include special characters (Yes or No)?");
-  console.log(writePassword.length);
 
+
+  //TODO - Generate if statements to dictate how arrays are concated based on user input
+  if (upperCase == "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
+    var allChars = caps.concat(lows, nums, spec);
+  }  else {
+    null
+  } 
+  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes"){
+    var noUps = lows.concat(nums, spec);
+  } else {
+    null
+  }
+  if (upperCase !== "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
+    var noUpsNoLows = nums.concat(spec);
+  } else {
+    null
+  }
+console.log(allChars);
+console.log(noUps);
+console.log(noUpsNoLows);
+//console.log(much);
+
+//TODO - Generate for statement to choose random characters from a concated array specified by user inputs
   //var password = generatePassword();
+
   var passwordText = document.querySelector("#password");
   
 
   passwordText.value = password;
 
 }
+
+
+//TODO - generate else statement to insure console doesnt break
+//TODO - Make sure one of every specified character is guaranteed to be included
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
