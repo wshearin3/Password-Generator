@@ -27,8 +27,48 @@ function writePassword() {
   } else {
     null
   }
+  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters == "Yes"){
+    var noLows = caps.concat(nums, spec);
+  } else {
+    null
+  }
+  if (upperCase == "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters !== "Yes"){
+    var noSpec = caps.concat(lows, nums);
+  } else {
+    null
+  }
+  if (upperCase == "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters == "Yes"){
+    var noNums = caps.concat(lows, spec);
+  } else {
+    null
+  }
+  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters == "Yes"){
+    var noUpsNoNums = lows.concat(spec);
+  } else {
+    null
+  }
   if (upperCase !== "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
     var noUpsNoLows = nums.concat(spec);
+  } else {
+    null
+  }
+  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters !== "Yes") {
+    var noUpsNoSpec = lows.concat(nums);
+  } else {
+    null
+  }
+  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters !== "Yes") {
+    var noLowsNoSpec = caps.concat(nums);
+  } else {
+    null
+  }
+  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric !== "Yes" && specialCharacters == "Yes") {
+    var noLowsNoNums = caps.concat(spec);
+  } else {
+    null
+  }
+  if (upperCase == "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters !== "Yes") {
+    var noNumsNoSpec = caps.concat(lows);
   } else {
     null
   }
