@@ -10,6 +10,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var much = prompt("How may characters does your password need to be (between 8 & 128)?");
+    muchInt = Number(much);
   var upperCase = prompt("Would you like to include uppercase characters (Yes or No)?");
   var lowerCase = prompt("Would you like to include lowercase characters (Yes or No)?");
   var numeric = prompt("Would you like to include numeric characters (Yes or No)?");
@@ -78,14 +79,20 @@ function writePassword() {
 //console.log(much);
 
 //TODO - Generate for statement to choose random characters from a concated array specified by user inputs
-  var password = generatePassword();
-function generatePassword() {
-  var char1 = Math.floor(Math.random() * caps.length);
-  var char2 = Math.floor(Math.random() * lows.length);
-  var char3 = Math.floor(Math.random() * nums.length);
-  var char4 = Math.floor(Math.random() * spec.length);
+  var password = generatePassword(muchInt);
+  
+function generatePassword(passwordLength) {
 
-  return(caps[char1] + lows[char2] + nums[char3] + spec[char4]) /* + string pulled based on user input to reach character length)*/;
+let passwords = "";
+  for (let i = 0; i < passwordLength; i++) {
+    //console.log("before" + passwords);
+    var char1 = Math.floor(Math.random() * allChars.length);
+    passwords  = passwords + allChars[char1];
+      
+        //console.log("after" + passwords);
+  }
+return (passwords);
+
 }
   var passwordText = document.querySelector("#password");
   
