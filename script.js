@@ -106,13 +106,13 @@ if (specialCharacters == "Yes") {
 //console.log(much);
 
 //TODO - Generate for statement to choose random characters from a concated array specified by user inputs
-  var password = generatePassword(muchInt);
+  var password = generatePassword(muchInt, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool);
   
-function generatePassword(passwordLength) {
+function generatePassword(passwordLength, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool) {
 
 let passwords = "";
   for (let i = 0; i < passwordLength; i++) {
-    //console.log("before" + passwords);
+    //console.log("before" + passwords + numericBool);
     var char1 = Math.floor(Math.random() * allChars.length);
     passwords  = passwords + allChars[char1];
       
