@@ -40,8 +40,12 @@ function writePassword() {
 //TODO - Generate for statement to choose random characters from a concated array specified by user inputs
   var password = generatePassword();
 function generatePassword() {
-  
-  return(4);
+  var char1 = Math.floor(Math.random() * caps.length);
+  var char2 = Math.floor(Math.random() * lows.length);
+  var char3 = Math.floor(Math.random() * nums.length);
+  var char4 = Math.floor(Math.random() * spec.length);
+
+  return(caps[char1] + lows[char2] + nums[char3] + spec[char4]) /* + string pulled based on user input to reach character length)*/;
 }
   var passwordText = document.querySelector("#password");
   
