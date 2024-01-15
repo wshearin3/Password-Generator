@@ -16,6 +16,33 @@ function writePassword() {
   var numeric = prompt("Would you like to include numeric characters (Yes or No)?");
   var specialCharacters = prompt("Would you like to include special characters (Yes or No)?");
 
+  var upperCaseBool;
+if (upperCase == "Yes") {
+  upperCaseBool = true;
+} else{
+  upperCaseBool = false;
+}
+
+var lowerCaseBool;
+if (lowerCase == "Yes") {
+  lowerCaseBool = true;
+} else{
+  lowerCaseBool = false;
+}
+
+var numericBool;
+if (numeric == "Yes") {
+  numericBool = true;
+} else{
+  numericBool = false;
+}
+
+var specialCharactersBool;
+if (specialCharacters == "Yes") {
+  specialCharactersBool = true;
+} else{
+  specialCharactersBool = false;
+}
 
   //TODO - Generate if statements to dictate how arrays are concated based on user input
   if (upperCase == "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
