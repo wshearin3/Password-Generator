@@ -32,14 +32,17 @@ function writePassword() {
   } else {
     null
   }
-console.log(allChars);
-console.log(noUps);
-console.log(noUpsNoLows);
+//console.log(allChars);
+//console.log(noUps);
+//console.log(noUpsNoLows);
 //console.log(much);
 
 //TODO - Generate for statement to choose random characters from a concated array specified by user inputs
-  //var password = generatePassword();
-
+  var password = generatePassword();
+function generatePassword() {
+  
+  return(4);
+}
   var passwordText = document.querySelector("#password");
   
 
