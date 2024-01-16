@@ -61,28 +61,19 @@ if (specialCharacters == "Yes") {
   
 function generatePassword(passwordLength, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool) {
 
+  //ensuring function doesnt break if an invalid number is entered
   if (muchInt>128 || muchInt<8 ) {
     return("Please input a value between 8 and 128.")
   } else {
     
-  
-
 let passwords = "";
 
-console.log("Function Start" + passwords)
-console.log(muchInt)
-console.log(passwordLength)
-
-
+//If statements to ensure character types are included based on user input
 if (numericBool) {
   var char2 = Math.floor(Math.random() * nums.length);
 passwords  = passwords + nums[char2];
 passwordLength = muchInt - 1;
 }
-
-console.log("After Numeric Bool" + passwords)
-console.log(muchInt)
-console.log(passwordLength)
 
 if (lowerCaseBool) {
   var char3 = Math.floor(Math.random() * nums.length);
@@ -90,19 +81,11 @@ passwords  = passwords + lows[char3];
 passwordLength = passwordLength - 1;
 }
 
-console.log("After Lows Bool" + passwords)
-console.log(muchInt)
-console.log(passwordLength)
-
 if (upperCaseBool) {
   var char4 = Math.floor(Math.random() * caps.length);
 passwords  = passwords + caps[char4];
 passwordLength = passwordLength - 1;
 }
-
-console.log("After Caps Bool" + passwords)
-console.log(muchInt)
-console.log(passwordLength)
 
 if (specialCharactersBool) {
   var char5 = Math.floor(Math.random() * spec.length);
@@ -110,24 +93,16 @@ passwords  = passwords + spec[char5];
 passwordLength = passwordLength - 1;
 }
 
-console.log("After Spec Bool" + passwords)
-console.log(muchInt)
-console.log(passwordLength)
 
   for (let i = 0; i < passwordLength; i++) {
-    //console.log("before" + passwords + numericBool);
+    
     var char1 = Math.floor(Math.random() * allChars.length);
     passwords  = passwords + allChars[char1];
         
-        //console.log("after" + passwords);
+  
   }
 
 
- /* if (lowerCaseBool) {
-    var char3 = Math.floor(Math.random() * lows.length);
-  passwords  = passwords + lows[char3];
-  remainingChar = passwords - 1;
-  } */
 return (passwords);
 
 }
@@ -138,10 +113,6 @@ return (passwords);
   passwordText.value = password;
 
 }
-
-
-
-//TODO - Make sure one of every specified character is guaranteed to be included
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
