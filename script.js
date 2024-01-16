@@ -1,9 +1,19 @@
 // Assignment code here
 var caps = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lows = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-var spec = ["!", "@", "#", "$", "%", "^", "&", "*", "-"]
-var allChars = caps.concat(lows, nums, spec)
+var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var spec = ["!", "@", "#", "$", "%", "^", "&", "*", "-"];
+var allChars = caps.concat(lows, nums, spec);
+var noUps = lows.concat(nums, spec);
+var noLows = caps.concat(nums, spec);
+var noSpec = caps.concat(lows, nums);
+var noNums = caps.concat(lows, spec);
+var noUpsNoNums = lows.concat(spec);
+var noUpsNoLows = nums.concat(spec);
+var noUpsNoSpec = lows.concat(nums);
+var noLowsNoSpec = caps.concat(nums);
+var noLowsNoNums = caps.concat(spec);
+var noNumsNoSpec = caps.concat(lows);
 
 // Get references to the #generate element, #generate is button id
 var generateBtn = document.querySelector("#generate");
@@ -45,62 +55,6 @@ if (specialCharacters == "Yes") {
   specialCharactersBool = false;
 }
 
-  //TODO - Generate if statements to dictate how arrays are concated based on user input
-
-  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes"){
-    var noUps = lows.concat(nums, spec);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters == "Yes"){
-    var noLows = caps.concat(nums, spec);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters !== "Yes"){
-    var noSpec = caps.concat(lows, nums);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters == "Yes"){
-    var noNums = caps.concat(lows, spec);
-  } else {
-    null
-  }
-  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters == "Yes"){
-    var noUpsNoNums = lows.concat(spec);
-  } else {
-    null
-  }
-  if (upperCase !== "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
-    var noUpsNoLows = nums.concat(spec);
-  } else {
-    null
-  }
-  if (upperCase !== "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters !== "Yes") {
-    var noUpsNoSpec = lows.concat(nums);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric == "Yes" && specialCharacters !== "Yes") {
-    var noLowsNoSpec = caps.concat(nums);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase !== "Yes" && numeric !== "Yes" && specialCharacters == "Yes") {
-    var noLowsNoNums = caps.concat(spec);
-  } else {
-    null
-  }
-  if (upperCase == "Yes" && lowerCase == "Yes" && numeric !== "Yes" && specialCharacters !== "Yes") {
-    var noNumsNoSpec = caps.concat(lows);
-  } else {
-    null
-  }
-//console.log(allChars);
-//console.log(noUps);
-//console.log(noUpsNoLows);
-//console.log(much);
 
 //TODO - Generate for statement to choose random characters from a concated array specified by user inputs
   var password = generatePassword(muchInt, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool);
