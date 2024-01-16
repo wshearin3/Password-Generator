@@ -93,14 +93,103 @@ passwords  = passwords + spec[char5];
 passwordLength = passwordLength - 1;
 }
 
-
+if (numericBool && lowerCaseBool && upperCaseBool && specialCharactersBool) {
   for (let i = 0; i < passwordLength; i++) {
     
     var char1 = Math.floor(Math.random() * allChars.length);
     passwords  = passwords + allChars[char1];
-        
-  
   }
+} else if (!numericBool && lowerCaseBool && upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char6 = Math.floor(Math.random() * noNums.length);
+    passwords  = passwords + noNums[char6];
+  }
+} else if (numericBool && !lowerCaseBool && upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char7 = Math.floor(Math.random() * noLows.length);
+    passwords  = passwords + noLows[char7];
+  }
+} else if (numericBool && lowerCaseBool && !upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char8 = Math.floor(Math.random() * noUps.length);
+    passwords  = passwords + noUps[char8];
+  }
+} else if (numericBool && lowerCaseBool && upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char9 = Math.floor(Math.random() * noSpec.length);
+    passwords  = passwords + noSpec[char9];
+  }
+} else if (!numericBool && lowerCaseBool && !upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char10 = Math.floor(Math.random() * noUpsNoNums.length);
+    passwords  = passwords + noUpsNoNums[char10];
+  }
+} else if (numericBool && !lowerCaseBool && !upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char11 = Math.floor(Math.random() * noUpsNoLows.length);
+    passwords  = passwords + noUpsNoLows[char11];
+  }
+} else if (numericBool && lowerCaseBool && !upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char12 = Math.floor(Math.random() * noUpsNoSpec.length);
+    passwords  = passwords + noUpsNoSpec[char12];
+  }
+} else if (numericBool && !lowerCaseBool && upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char13 = Math.floor(Math.random() * noLowsNoSpec.length);
+    passwords  = passwords + noLowsNoSpec[char13];
+  }
+} else if (!numericBool && !lowerCaseBool && upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char14 = Math.floor(Math.random() * noLowsNoNums.length);
+    passwords  = passwords + noLowsNoNums[char14];
+  }
+} else if (!numericBool && lowerCaseBool && upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char15 = Math.floor(Math.random() * noNumsNoSpec.length);
+    passwords  = passwords + noNumsNoSpec[char15];
+  }
+} else if (!numericBool && !lowerCaseBool && !upperCaseBool && specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char16 = Math.floor(Math.random() * spec.length);
+    passwords  = passwords + spec[char16];
+  }
+} else if (!numericBool && !lowerCaseBool && upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char17 = Math.floor(Math.random() * caps.length);
+    passwords  = passwords + caps[char17];
+  }
+} else if (!numericBool && lowerCaseBool && !upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char18 = Math.floor(Math.random() * lows.length);
+    passwords  = passwords + lows[char18];
+  }
+} else if (numericBool && !lowerCaseBool && !upperCaseBool && !specialCharactersBool){
+  for (let i = 0; i < passwordLength; i++) {
+    
+    var char19 = Math.floor(Math.random() * nums.length);
+    passwords  = passwords + nums[char19];
+  }
+}
+  /*for (let i = 0; i < passwordLength; i++) {
+    
+    var char1 = Math.floor(Math.random() * allChars.length);
+    passwords  = passwords + allChars[char1];
+        
+  } */
 
 
 return (passwords);
