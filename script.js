@@ -183,7 +183,9 @@ if (numericBool && lowerCaseBool && upperCaseBool && specialCharactersBool) {
     var char19 = Math.floor(Math.random() * nums.length);
     passwords  = passwords + nums[char19];
   }
-}
+} else if (!numericBool && !lowerCaseBool && !upperCaseBool && !specialCharactersBool){
+  passwords = "Please type Yes for at least one value type"
+} 
   /*for (let i = 0; i < passwordLength; i++) {
     
     var char1 = Math.floor(Math.random() * allChars.length);
