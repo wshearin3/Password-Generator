@@ -62,7 +62,13 @@ if (specialCharacters == "Yes") {
 function generatePassword(passwordLength, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool) {
 
 let passwords = "";
-var remainingChar = passwordLength;
+
+if (numericBool) {
+  var char2 = Math.floor(Math.random() * nums.length);
+passwords  = passwords + nums[char2];
+passwordLength = muchInt - 1;
+}
+
   for (let i = 0; i < passwordLength; i++) {
     //console.log("before" + passwords + numericBool);
     var char1 = Math.floor(Math.random() * allChars.length);
@@ -71,11 +77,12 @@ var remainingChar = passwordLength;
         //console.log("after" + passwords);
   }
 
-  if (numericBool) {
-    var char2 = Math.floor(Math.random() * nums.length);
-  passwords  = passwords + nums[char2];
-  remainingChar = remainingChar - 1;
-  }
+
+ /* if (lowerCaseBool) {
+    var char3 = Math.floor(Math.random() * lows.length);
+  passwords  = passwords + lows[char3];
+  remainingChar = passwords - 1;
+  } */
 return (passwords);
 
 }
