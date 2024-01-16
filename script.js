@@ -3,6 +3,7 @@ var caps = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"
 var lows = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 var spec = ["!", "@", "#", "$", "%", "^", "&", "*", "-"]
+var allChars = caps.concat(lows, nums, spec)
 
 // Get references to the #generate element, #generate is button id
 var generateBtn = document.querySelector("#generate");
@@ -45,11 +46,7 @@ if (specialCharacters == "Yes") {
 }
 
   //TODO - Generate if statements to dictate how arrays are concated based on user input
-  if (upperCase == "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes") {
-    var allChars = caps.concat(lows, nums, spec);
-  }  else {
-    null
-  } 
+
   if (upperCase !== "Yes" && lowerCase == "Yes" && numeric == "Yes" && specialCharacters == "Yes"){
     var noUps = lows.concat(nums, spec);
   } else {
