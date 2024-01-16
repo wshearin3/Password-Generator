@@ -61,6 +61,12 @@ if (specialCharacters == "Yes") {
   
 function generatePassword(passwordLength, numericBool, lowerCaseBool, upperCaseBool, specialCharactersBool) {
 
+  if (muchInt>128 || muchInt<8 ) {
+    return("Please input a value between 8 and 128.")
+  } else {
+    
+  
+
 let passwords = "";
 
 console.log("Function Start" + passwords)
@@ -105,6 +111,7 @@ console.log(passwordLength)
 return (passwords);
 
 }
+}
   var passwordText = document.querySelector("#password");
   
 
@@ -113,7 +120,7 @@ return (passwords);
 }
 
 
-//TODO - generate else statement to insure console doesnt break
+
 //TODO - Make sure one of every specified character is guaranteed to be included
 
 // Add event listener to generate button
