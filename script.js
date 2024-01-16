@@ -90,7 +90,27 @@ passwords  = passwords + lows[char3];
 passwordLength = passwordLength - 1;
 }
 
-console.log("After Numeric Bool" + passwords)
+console.log("After Lows Bool" + passwords)
+console.log(muchInt)
+console.log(passwordLength)
+
+if (upperCaseBool) {
+  var char4 = Math.floor(Math.random() * caps.length);
+passwords  = passwords + caps[char4];
+passwordLength = passwordLength - 1;
+}
+
+console.log("After Caps Bool" + passwords)
+console.log(muchInt)
+console.log(passwordLength)
+
+if (specialCharactersBool) {
+  var char5 = Math.floor(Math.random() * spec.length);
+passwords  = passwords + spec[char5];
+passwordLength = passwordLength - 1;
+}
+
+console.log("After Spec Bool" + passwords)
 console.log(muchInt)
 console.log(passwordLength)
 
