@@ -63,11 +63,30 @@ function generatePassword(passwordLength, numericBool, lowerCaseBool, upperCaseB
 
 let passwords = "";
 
+console.log("Function Start" + passwords)
+console.log(muchInt)
+console.log(passwordLength)
+
+
 if (numericBool) {
   var char2 = Math.floor(Math.random() * nums.length);
 passwords  = passwords + nums[char2];
 passwordLength = muchInt - 1;
 }
+
+console.log("After Numeric Bool" + passwords)
+console.log(muchInt)
+console.log(passwordLength)
+
+if (lowerCaseBool) {
+  var char3 = Math.floor(Math.random() * nums.length);
+passwords  = passwords + lows[char3];
+passwordLength = passwordLength - 1;
+}
+
+console.log("After Numeric Bool" + passwords)
+console.log(muchInt)
+console.log(passwordLength)
 
   for (let i = 0; i < passwordLength; i++) {
     //console.log("before" + passwords + numericBool);
